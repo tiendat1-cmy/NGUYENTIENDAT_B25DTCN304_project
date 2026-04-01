@@ -1,0 +1,553 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: #1F2937;
+  padding: 0 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo span {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo_text span {
+  color: #E60A15;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 16px;
+  position: relative
+}
+
+.nav a:hover {
+  color: #E70814;
+}
+
+.btn_header {
+  background-color: #E70814;
+  color: white;
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_header:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.02);
+}
+
+body {
+  background: #0b1120;
+  color: white;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url(../assets/images/Background\ \(3\).svg) center/cover no-repeat;
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 0, 0, 0.2);
+  color: red;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+  transition: 0.3s;
+}
+
+.hero-btns :hover {
+  transform: scale(1.02);
+}
+
+.btn {
+  padding: 10px 30px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+
+}
+
+
+.primary {
+  background: red;
+  color: white;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid #888;
+  color: white;
+}
+
+.movie-section {
+  padding: 40px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px;
+
+}
+
+.section-title h2 {
+  font-size: 24px;
+}
+
+.section-title a {
+  color: #ff4444;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.section-title a:hover {
+  text-decoration: underline;
+}
+
+/* Lưới 4 phim */
+.net-film {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+
+.card-movie {
+  background-color: #111421;
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+
+.card-movie img {
+  width: 100%;
+  display: block;
+  /* ảnh tỉ lệ poster phim */
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background-color: #1a1e30;
+}
+
+.card-movie .info {
+  padding: 14px;
+}
+
+.card-movie .movie-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-movie .meta {
+  font-size: 13px;
+  color: #8a8fa8;
+  margin-bottom: 14px;
+}
+
+.btn-buytickets {
+  width: 100%;
+  padding: 10px;
+  background-color: #472330;
+  color: #aa131f;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0, 3s;
+}
+
+.btn-buytickets:hover {
+  background-color: #ff2222;
+  color: white;
+  transform: scale(1.02);
+}
+
+
+.lines {
+  border: none;
+  border-top: 1px solid #222;
+}
+
+/* ===== SECTION: ƯU ĐÃI ===== */
+.endow-section {
+  background-color: #0d1020;
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.endow-section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.endow-section .describe {
+  color: #8a8fa8;
+  font-size: 14px;
+  margin-bottom: 36px;
+}
+
+/* Lưới 3 ưu đãi */
+.net-endow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-endow {
+  background-color: #111421;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+
+.card-endow:hover {
+  border-color: #e02020;
+}
+
+.card-endow .icon {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.card-endow h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card-endow p {
+  font-size: 13px;
+  color: #8a8fa8;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.card-endow a {
+  color: #ff4444;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.card-endow a:hover {
+  text-decoration: underline;
+}
+
+
+.why-section {
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.why-section h2 {
+  font-size: 30px;
+  margin-bottom: 36px;
+}
+
+
+.net-why {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-why {
+  background-color: #111421;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 28px 20px;
+  text-align: left;
+}
+
+.card-why .icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.card-why h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.card-why p {
+  font-size: 16px;
+  color: #8a8fa8;
+  line-height: 1.7;
+}
+
+/* email */
+.email-section {
+  background-color: #111421;
+  height: 160px;
+  padding: 36px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.email-section h3 {
+  font-size: 25px;
+  margin-bottom: 6px;
+}
+
+.email-section p {
+  font-size: 16px;
+  color: #8a8fa8;
+}
+
+.email-form {
+  display: flex;
+  gap: 10px;
+}
+
+.email-form input {
+  padding: 10px 16px;
+  background-color: #111421;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  width: 240px;
+  outline: none;
+}
+.error-message {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 4px;
+  height: 16px;
+}
+
+.success-message {
+  color: #4caf50;
+  font-size: 13px;
+  margin-top: 4px;
+  height: 16px;
+}
+
+.email-form input:focus {
+  border-color: #e02020;
+}
+
+.email-form button {
+  padding: 10px 20px;
+  background-color: #e02020;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.email-form button:hover {
+  background-color: #ff2222;
+}
+
+footer {
+  padding: 24px 40px;
+  border-top: 1px solid #222;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  height: 60px;
+}
+.footer-social {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  color: #555;
+}
+
+.footer-links a {
+  margin-top: 20px;
+  color: #8a8fa8;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-top: 50px;
+}
+/* button header */
+#btn_header {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #e50914;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btn_header:hover {
+  background: #c40812;
+}
+
+/* khi đã login */
+.btn-logout {
+  background: #22c55e !important;
+}
+
+.btn-logout:hover {
+  background: #16a34a !important;
+}
+
+/* ===== MODAL ===== */
+.logout-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.logout-box {
+  background: #1e1e1e;
+  padding: 24px 28px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  width: 320px;
+  animation: fadeIn 0.3s ease;
+}
+
+.logout-box h3 {
+  margin-bottom: 20px;
+}
+
+.logout-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.logout-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* nút xác nhận */
+#confirmLogout {
+  background: #ef4444;
+  color: #fff;
+}
+
+#confirmLogout:hover {
+  background: #dc2626;
+}
+
+/* nút hủy */
+#cancelLogout {
+  background: #374151;
+  color: #fff;
+}
+
+#cancelLogout:hover {
+  background: #1f2937;
+}
+
+/* animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

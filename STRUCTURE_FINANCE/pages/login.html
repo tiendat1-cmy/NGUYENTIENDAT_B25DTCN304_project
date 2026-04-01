@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../CSS/login.css" />
+<!-- link chữ -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+<!-- link incon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../assets/incons/Container.svg" alt="" />
+        <span class="logo_text">Rikkei <span>Cinema</span></span>
+      </div>
+
+      <div class="nav">
+        <a href="./index.html">Trang chủ</a>
+        <a href="#">Thông tin</a>
+        <a href="#">Liên hệ</a>
+        <button class="btn_header">Đăng nhập</button>
+      </div>
+    </header>
+
+    <section class="login">
+      <form class="login_box">
+
+        <div class="card-banner">
+          <img src="../assets/images/Background.svg" alt="">
+        </div>
+
+        <h1>Chào mừng quay trở lại</h1>
+
+        <div class="form_group">
+          <label>Email</label>
+          <div class="input_box">
+            <input id="email" type="text" placeholder="Nhập email của bạn" />
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          </div>
+          <small class="error" id="emailError"></small>
+          <span id="errorEmail"></span>
+        </div>
+
+        <div class="form_group">
+          <label>Mật khẩu</label>
+          <div class="input_box">
+            <input id="password" type="password" placeholder="Nhập mật khẩu của bạn"/>
+            <span class="icon eye" id="togglePassword">
+              <i class="fa-solid fa-eye"></i>
+            </span>
+            <span
+                id="errorPassword"
+                style="color: red; font-size: 12px"
+              ></span>
+          </div>
+        </div>
+
+        <div class="options">
+          <label class="form__check">
+            <input type="checkbox" />
+            <span class="form__check-box"></span>
+            <span class="form__check-text">
+             Ghi nhớ đăng nhập</label>
+          <a href="#">Quên mật khẩu?</a>
+        </div>
+
+        <button class="btn_login">
+          Đăng nhập <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <p class="register">
+          Bạn chưa có tài khoản? <a href="./register.html" class="link-red">Đăng ký ngay</a>
+        </p>
+
+      </form>
+    </section>
+    <script src="../JS/login.js"></script>
+  </body>
+</html>

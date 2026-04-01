@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rikkei Cinema - Admin</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/admin.css" />
+  </head>
+  <body>
+    <div class="admin-container">
+      <div class="sidebar">
+        <div class="logo">
+          <span class="red-dot">
+            <img src="../assets/images/Background (2).svg" alt=""
+          /></span>
+          Rikkei <span class="red-text">Cinema</span>
+        </div>
+        <div class="menu">
+          <div class="menu-item active">Quản lý phim</div>
+          <div class="menu-item">Quản lý vé</div>
+        </div>
+        <div class="user-info">
+          <img src="../assets/images/Image+Border.svg" class="avatar" />
+          <div>
+            <p>Admin Quản lý</p>
+            <small>LQTuan@rikkei.edu.vn</small>
+            <i
+              class="fa-solid fa-right-from-bracket logout-icon"
+              onclick="openLogoutModal()"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="header">
+          <div>
+            <h1>Quản lý danh sách phim</h1>
+            <p>Xem, chỉnh sửa và quản lý tất cả phim</p>
+          </div>
+          <div class="header-right">
+            <input
+              type="text"
+              placeholder="Tìm tên phim..."
+              class="search-input"
+            />
+            <button class="btn-add">+ Thêm phim mới</button>
+          </div>
+        </div>
+
+        <div class="filters">
+          <span class="filter-item active">Tất cả (24)</span>
+          <span class="filter-item">Đang chiếu (8)</span>
+          <span class="filter-item">Sắp chiếu (5)</span>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ẢNH BÌA</th>
+                <th>TÊN PHIM</th>
+                <th>THỜI LƯỢNG</th>
+                <th>TRẠNG THÁI</th>
+                <th>THAO TÁC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="../assets/images/Dune Poster.svg"
+                    class="movie-img"
+                  />
+                </td>
+                <td><strong>Dune: Part Two</strong></td>
+                <td>166 phút</td>
+                <td><span class="status-green">Đang chiếu</span></td>
+                <td>✏️ ❌</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="../assets/images/Background+Shadow.svg"
+                    class="movie-img"
+                  />
+                </td>
+                <td><strong>Kung Fu Panda 4</strong></td>
+                <td>94 phútt</td>
+                <td><span class="status-green">Đang chiếu</span></td>
+                <td>✏️ ❌</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="../assets/images/Dune Poster.svg"
+                    class="movie-img"
+                  />
+                </td>
+                <td><strong>Godzilla x Kong: The New Empire</strong></td>
+                <td>115 phút</td>
+                <td><span class="status-green">Sắp chiếu</span></td>
+                <td>✏️ ❌</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="../assets/images/Dune Poster.svg"
+                    class="movie-img"
+                  />
+                </td>
+                <td><strong>Dune: Part Two</strong></td>
+                <td>166 phút</td>
+                <td><span class="status-green">Đang chiếu</span></td>
+                <td>✏️ ❌</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="logoutModal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Xác nhận đăng xuất</h3>
+        <p>Bạn có chắc muốn đăng xuất không?</p>
+        <div class="modal-actions">
+          <button onclick="closeLogoutModal()" class="btn-cancel">Hủy</button>
+          <button onclick="confirmLogout()" class="btn-confirm">
+            Đăng xuất
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="toast"></div>
+    <script src="../JS/admin.js"></script>
+  </body>
+</html>
